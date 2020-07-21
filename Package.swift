@@ -1,4 +1,4 @@
-// swift-tools-version:4.0
+// swift-tools-version:5.0
 
 import PackageDescription
 
@@ -10,7 +10,7 @@ let package = Package(
             targets: ["HDF5Kit"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/aleph7/CHDF5.git", from: "1.0.0")
+        .package(url: "https://github.com/trueb2/CHDF5.git", from: "1.0.0")
     ],
     targets: [
         .target(
