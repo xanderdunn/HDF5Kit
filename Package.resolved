@@ -3,13 +3,13 @@
     "pins": [
       {
         "package": "CHDF5",
-        "repositoryURL": "https://github.com/trueb2/CHDF5",
+        "repositoryURL": "https://github.com/trueb2/CHDF5.git",
         "state": {
           "branch": null,
           "revision": "fe3301ac74b9c2f4fb25f8ec29abea067495edc6",
           "version": "1.0.3"
         }
-      },
+      }
     ]
   },
   "version": 1
