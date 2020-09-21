@@ -1,6 +1,9 @@
 # HDF5Kit
 
+This is a Swift wrapper for the [HDF5](https://www.hdfgroup.org) file format. HDF5 is used in the scientific comunity for managing large volumes of data. The objective is to make it easy to read and write HDF5 files from Swift, including playgrounds.
+
 ## Build and Test
+
 - macOS
     - `brew install hdf5`
     - `swift build -Xlinker -L/usr/local/lib/`
@@ -11,10 +14,15 @@
     - `swift build -Xlinker -L/usr/lib/hdf5/serial/`
     - `swift test -Xlinker -L/usr/lib/hdf5/serial/`
 
-This is a Swift wrapper for the [HDF5](https://www.hdfgroup.org) file format. HDF5 is used in the scientific comunity for managing large volumes of data. The objective is to make it easy to read and write HDF5 files from Swift, including playgrounds.
-
-
 ## Usage
+
+Add to your project with:
+```swift
+.package(name: "HDF5Kit",
+         url: "https://github.com/xanderdunn/HDF5Kit.git",
+         .branch("master"))
+.product(name: "HDF5Kit", package: "HDF5Kit"),
+```
 
 This example shows how to open an existing HDF5 file and write data to an existing dataset.
 
