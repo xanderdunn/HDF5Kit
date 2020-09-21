@@ -1,10 +1,14 @@
 # HDF5Kit
 
 ## Build and Test
+
 - macOS
-    - `swift build`
+    - `swift build -Xlinker -L/usr/local/lib/`
     - `swift test -Xlinker -L/usr/local/lib/`
+    - To generate the tests for Linux: `swift test --generate-linuxmain -Xlinker -L/usr/local/lib/`. This must be run with the Xcode-provided Swift at /usr/bin/swift.
 - Ubuntu
+    - `swift build -Xlinker -L/usr/lib/hdf5/serial/`
+    - `swift test -Xlinker -L/usr/lib/hdf5/serial/`
 
 This is a Swift wrapper for the [HDF5](https://www.hdfgroup.org) file format. HDF5 is used in the scientific comunity for managing large volumes of data. The objective is to make it easy to read and write HDF5 files from Swift, including playgrounds.
 

@@ -3,6 +3,6 @@ import XCTest
 import HDF5KitTests
 
 var tests = [XCTestCaseEntry]()
-/*tests += AttributeTests.allTests()*/
-/*tests += DataspaceTests.allTests()*/
+tests += HDF5KitTests.__allTests()
+
 XCTMain(tests)
