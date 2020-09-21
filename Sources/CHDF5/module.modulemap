@@ -1,10 +1,11 @@
 module CHDF5 [system] {
     // Linux:
     // Lib is at /usr/lib/hdf5/serial/libhdf5.*
-    umbrella header "/usr/include/hdf5/serial/hdf5.h"
+    // umbrella header "/usr/include/hdf5/serial/hdf5.h"
     // macOS:
     // Lib is at /usr/local/lib/libhdf5.*
     // umbrella header "/usr/local/include/hdf5.h"
+    umbrella header "umbrella.h"
     link "hdf5"
     export *
 }
