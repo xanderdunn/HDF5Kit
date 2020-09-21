@@ -32,7 +32,7 @@ open class FloatAttribute: Attribute {
 
 public extension GroupType {
     /// Creates a `Float` attribute.
-    public func createFloatAttribute(_ name: String, dataspace: Dataspace) -> FloatAttribute? {
+    func createFloatAttribute(_ name: String, dataspace: Dataspace) -> FloatAttribute? {
         guard let datatype = Datatype(type: Float.self) else {
             return nil
         }
@@ -43,7 +43,7 @@ public extension GroupType {
     }
 
     /// Opens a `Float` attribute.
-    public func openFloatAttribute(_ name: String) -> FloatAttribute? {
+    func openFloatAttribute(_ name: String) -> FloatAttribute? {
         let attributeID = name.withCString{ name in
             return H5Aopen(id, name, 0)
         }

@@ -32,7 +32,7 @@ open class IntAttribute: Attribute {
 
 public extension GroupType {
     /// Creates a `Int` attribute.
-    public func createIntAttribute(_ name: String, dataspace: Dataspace) -> IntAttribute? {
+    func createIntAttribute(_ name: String, dataspace: Dataspace) -> IntAttribute? {
         guard let datatype = Datatype(type: Int.self) else {
             return nil
         }
@@ -43,7 +43,7 @@ public extension GroupType {
     }
 
     /// Opens an `Int` attribute.
-    public func openIntAttribute(_ name: String) -> IntAttribute? {
+    func openIntAttribute(_ name: String) -> IntAttribute? {
         let attributeID = name.withCString{ name in
             return H5Aopen(id, name, 0)
         }

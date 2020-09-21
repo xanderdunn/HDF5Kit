@@ -1,0 +1,5 @@
+module CHDF5 [system] {
+    umbrella header "/usr/include/hdf5/serial/hdf5.h"
+    link "hdf5"
+    export *
+}

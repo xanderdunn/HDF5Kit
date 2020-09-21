@@ -5,20 +5,11 @@ import PackageDescription
 let package = Package(
     name: "HDF5Kit",
     products: [
-        .library(
-            name: "HDF5Kit",
-            targets: ["HDF5Kit"]),
-    ],
-    dependencies: [
-        .package(url: "https://github.com/trueb2/CHDF5.git", from: "1.0.0")
+        .library(name: "HDF5Kit", targets: ["HDF5Kit"]),
     ],
     targets: [
-        .target(
-            name: "HDF5Kit",
-            dependencies: [],
-            path: "Source"),
-        .testTarget(
-            name: "HDF5KitTests",
-            dependencies: ["HDF5Kit"]),
+        .systemLibrary(name: "CHDF5"),
+        .target(name: "HDF5Kit", dependencies: ["CHDF5"]),
+        .testTarget(name: "HDF5KitTests", dependencies: ["HDF5Kit"]),
     ]
 )

@@ -32,7 +32,7 @@ open class DoubleAttribute: Attribute {
 
 public extension GroupType {
     /// Creates a `Double` attribute.
-    public func createDoubleAttribute(_ name: String, dataspace: Dataspace) -> DoubleAttribute? {
+    func createDoubleAttribute(_ name: String, dataspace: Dataspace) -> DoubleAttribute? {
         guard let datatype = Datatype(type: Double.self) else {
             return nil
         }
@@ -43,7 +43,7 @@ public extension GroupType {
     }
 
     /// Opens a `Double` attribute.
-    public func openDoubleAttribute(_ name: String) -> DoubleAttribute? {
+    func openDoubleAttribute(_ name: String) -> DoubleAttribute? {
         let attributeID = name.withCString{ name in
             return H5Aopen(id, name, 0)
         }

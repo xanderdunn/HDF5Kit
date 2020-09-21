@@ -4,11 +4,11 @@
 // terms governing use, modification, and redistribution, is contained in the
 // file LICENSE at the root of the source code distribution tree.
 
+import Foundation
 import HDF5Kit
 
 func tempFilePath() -> String {
-    let fileName = ProcessInfo.processInfo.globallyUniqueString + ".hdf"
-    return NSTemporaryDirectory() + "/" + fileName
+    return "/tmp/\(UUID()).hdf"
 }
 
 func createFile(_ filePath: String) -> File {
