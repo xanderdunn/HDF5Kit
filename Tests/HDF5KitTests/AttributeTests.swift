@@ -1,11 +1,5 @@
-// Copyright © 2016 Alejandro Isaza.
-//
-// This file is part of HDF5Kit. The full HDF5Kit copyright notice, including
-// terms governing use, modification, and redistribution, is contained in the
-// file LICENSE at the root of the source code distribution tree.
-
 import XCTest
-import HDF5Kit
+@testable import HDF5Kit
 
 class AttributeTests: XCTestCase {
 
@@ -73,4 +67,11 @@ class AttributeTests: XCTestCase {
         try attribute.write(writeData)
         XCTAssertEqual(try attribute.read(), [writeData])
     }
+
+    static let allTests = [
+        ("testName", testName),
+        ("testWriteReadInt", testWriteReadInt),
+        ("testWriteReadString", testWriteReadString),
+        ("testWriteReadFixedString", testWriteReadFixedString)
+    ]
 }

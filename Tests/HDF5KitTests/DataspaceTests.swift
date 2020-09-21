@@ -5,7 +5,7 @@
 // file LICENSE at the root of the source code distribution tree.
 
 import XCTest
-import HDF5Kit
+@testable import HDF5Kit
 
 class DataspaceTests: XCTestCase {
 
