@@ -1,5 +1,11 @@
 # HDF5Kit
 
+## Build and Test
+- macOS
+    - `swift build`
+    - `swift test -Xlinker -L/usr/local/lib/`
+- Ubuntu
+
 This is a Swift wrapper for the [HDF5](https://www.hdfgroup.org) file format. HDF5 is used in the scientific comunity for managing large volumes of data. The objective is to make it easy to read and write HDF5 files from Swift, including playgrounds.
 
 
