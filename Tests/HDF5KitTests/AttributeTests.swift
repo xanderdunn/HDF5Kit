@@ -67,11 +67,4 @@ class AttributeTests: XCTestCase {
         try attribute.write(writeData)
         XCTAssertEqual(try attribute.read(), [writeData])
     }
-
-    static let allTests = [
-        ("testName", testName),
-        ("testWriteReadInt", testWriteReadInt),
-        ("testWriteReadString", testWriteReadString),
-        ("testWriteReadFixedString", testWriteReadFixedString)
-    ]
 }

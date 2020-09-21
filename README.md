@@ -10,7 +10,7 @@ This is a Swift wrapper for the [HDF5](https://www.hdfgroup.org) file format. HD
     - `swift test -Xlinker -L/usr/local/lib/`
     - To generate the tests for Linux: `swift test --generate-linuxmain -Xlinker -L/usr/local/lib/`. This must be run with the Xcode-provided Swift at /usr/bin/swift. It does not work in Swift for Tensorflow or the Swift release build for macOS on swift.org.
 - Ubuntu
-    - `sudo apt install libhdf5-serial-dev`
+    - `sudo apt install libhdf5-dev`
     - `swift build -Xlinker -L/usr/lib/x86_64-linux-gnu/hdf5/serial`
     - `swift test -Xlinker -L/usr/lib/x86_64-linux-gnu/hdf5/serial`
 
