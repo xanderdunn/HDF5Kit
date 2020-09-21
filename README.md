@@ -6,11 +6,13 @@ This is a Swift wrapper for the [HDF5](https://www.hdfgroup.org) file format. HD
 
 - macOS
     - `brew install hdf5`
+        - This does not appear to install a .pc file
     - `swift build -Xlinker -L/usr/local/lib/`
     - `swift test -Xlinker -L/usr/local/lib/`
     - To generate the tests for Linux: `swift test --generate-linuxmain -Xlinker -L/usr/local/lib/`. This must be run with the Xcode-provided Swift at /usr/bin/swift. It does not work in Swift for Tensorflow or the Swift release build for macOS on swift.org.
 - Ubuntu
     - `sudo apt install libhdf5-dev`
+        - This puts a pkg-config file at `/usr/lib/x86_64-linux-gnu/pkgconfig/hdf5.pc`
     - `swift build -Xlinker -L/usr/lib/x86_64-linux-gnu/hdf5/serial`
     - `swift test -Xlinker -L/usr/lib/x86_64-linux-gnu/hdf5/serial`
 
