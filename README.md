@@ -1,12 +1,13 @@
 # HDF5Kit
 
 ## Build and Test
-
 - macOS
+    - `brew install hdf5`
     - `swift build -Xlinker -L/usr/local/lib/`
     - `swift test -Xlinker -L/usr/local/lib/`
     - To generate the tests for Linux: `swift test --generate-linuxmain -Xlinker -L/usr/local/lib/`. This must be run with the Xcode-provided Swift at /usr/bin/swift.
 - Ubuntu
+    - `sudo apt install libhdf5-serial-dev`
     - `swift build -Xlinker -L/usr/lib/hdf5/serial/`
     - `swift test -Xlinker -L/usr/lib/hdf5/serial/`
 
